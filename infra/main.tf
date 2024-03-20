@@ -36,7 +36,7 @@ module "eks" {
 resource "aws_eks_fargate_profile" "my_fargate_profile" {
   cluster_name            = module.eks.cluster_name
   fargate_profile_name    = "my-fargate-profile"
-  pod_execution_role_arn  = arn:aws:iam::767397811632:role/eks-pod-execution-role
+  pod_execution_role_arn  = "arn:aws:iam::767397811632:role/eks-pod-execution-role"
   subnet_ids              = module.vpc.private_subnets  # Use as subnets privadas definidas no módulo VPC
 
   selector {
